@@ -1,4 +1,7 @@
+'use client'
+
 import Link from 'next/link'
+import { Wallet, RocketLaunch } from "phosphor-react"
 
 export default function Home() {
   return (
@@ -47,13 +50,13 @@ export default function Home() {
               <div className="flex flex-col gap-4 w-full">
                 {/* Primary Button */}
                 <Link href="/profile-setup" className="group flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-full h-14 px-6 bg-primary text-background-dark text-base font-bold leading-normal tracking-[0.015em] transition-all duration-300 hover:shadow-[0_0_20px_rgba(43,238,121,0.4)] hover:scale-[1.02]">
-                  <span className="material-symbols-outlined text-background-dark mr-2 text-[24px]">account_balance_wallet</span>
+                  <Wallet size={24} weight="bold" className="mr-2" />
                   <span className="truncate">Connect Sui Wallet</span>
                 </Link>
                 
                 {/* Secondary Button */}
                 <Link href="/network" className="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-full h-14 px-6 border border-primary/30 hover:border-primary/80 bg-transparent text-white text-base font-bold leading-normal tracking-[0.015em] transition-all duration-300 hover:bg-primary/5">
-                  <span className="material-symbols-outlined text-primary mr-2 text-[24px]">rocket_launch</span>
+                  <RocketLaunch size={24} weight="bold" className="mr-2" />
                   <span className="truncate">Explore Demo</span>
                 </Link>
               </div>
@@ -72,4 +75,3 @@ export default function Home() {
     </div>
   )
 }
-
